@@ -3610,3 +3610,62 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h0,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.card__heading,
+.collection__title,
+.product__title,
+.button,
+.shopify-challenge__button,
+.customer button,
+.price {
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+.h0,
+.h1,
+.h2,
+.collection__title .title,
+.product__title h1 {
+  font-weight: 500;
+}
+
+.text-body,
+.rte,
+.card-information,
+.product__text,
+.caption-large {
+  letter-spacing: 0;
+}
+
+.card__heading {
+  line-height: 1.35;
+}
+
+.card-information,
+.price {
+  font-weight: 500;
+}
+
+.button,
+.shopify-challenge__button,
+.customer button {
+  font-weight: 500;
+}
