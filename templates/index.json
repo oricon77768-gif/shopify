@@ -6,14 +6,21 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "Stock up on Korean beauty and save more",
             "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Build your routine with skincare, sunscreen, makeup, and everyday K-beauty essentials.",
+            "text_style": "subtitle"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "Shop K-beauty",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
@@ -24,6 +31,7 @@
       },
       "block_order": [
         "heading",
+        "text",
         "button"
       ],
       "settings": {
@@ -39,37 +47,213 @@
         "show_text_below": false
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "savings_tiers": {
+      "type": "ks-savings-tiers",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
+        "heading": "Stock up and save more",
+        "subheading": "<p>Build a bigger Korean beauty basket and unlock savings according to your current store promotions.</p>",
+        "heading_size": "h1",
         "color_scheme": "scheme-1",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 24
+      },
+      "blocks": {
+        "tier_1": {
+          "type": "tier",
+          "settings": {
+            "threshold": "$100+",
+            "label": "Start saving on beauty essentials"
+          }
+        },
+        "tier_2": {
+          "type": "tier",
+          "settings": {
+            "threshold": "$250+",
+            "label": "Better value for stock-up orders"
+          }
+        },
+        "tier_3": {
+          "type": "tier",
+          "settings": {
+            "threshold": "$500+",
+            "label": "Unlock higher campaign savings"
+          }
+        },
+        "tier_4": {
+          "type": "tier",
+          "settings": {
+            "threshold": "$1,000+",
+            "label": "Best tier for group and bulk baskets"
+          }
+        }
+      },
+      "block_order": [
+        "tier_1",
+        "tier_2",
+        "tier_3",
+        "tier_4"
+      ]
+    },
+    "new_arrivals": {
+      "type": "ks-featured-collection-grid",
+      "settings": {
+        "collection": "new-arrivals",
+        "heading": "New Arrivals",
+        "heading_size": "h2",
+        "cta_label": "Shop new arrivals",
+        "cta_link": "shopify://collections/new-arrivals",
+        "products_to_show": 4,
         "image_ratio": "adapt",
-        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "quick_add": "standard",
+        "color_scheme": "scheme-1",
+        "padding_top": 28,
+        "padding_bottom": 20
       }
+    },
+    "best_sellers": {
+      "type": "ks-featured-collection-grid",
+      "settings": {
+        "collection": "best-sellers",
+        "heading": "Best Sellers",
+        "heading_size": "h2",
+        "cta_label": "Shop best sellers",
+        "cta_link": "shopify://collections/best-sellers",
+        "products_to_show": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "sunscreens": {
+      "type": "ks-featured-collection-grid",
+      "settings": {
+        "collection": "sunscreens",
+        "heading": "Sunscreens",
+        "heading_size": "h2",
+        "cta_label": "Shop sunscreens",
+        "cta_link": "shopify://collections/sunscreens",
+        "products_to_show": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "moisturisers": {
+      "type": "ks-featured-collection-grid",
+      "settings": {
+        "collection": "moisturisers",
+        "heading": "Moisturisers",
+        "heading_size": "h2",
+        "cta_label": "Shop moisturisers",
+        "cta_link": "shopify://collections/moisturisers",
+        "products_to_show": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "serums": {
+      "type": "ks-featured-collection-grid",
+      "settings": {
+        "collection": "serums",
+        "heading": "Serums",
+        "heading_size": "h2",
+        "cta_label": "Shop serums",
+        "cta_link": "shopify://collections/serums",
+        "products_to_show": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "makeup": {
+      "type": "ks-featured-collection-grid",
+      "settings": {
+        "collection": "makeup",
+        "heading": "Makeup",
+        "heading_size": "h2",
+        "cta_label": "Shop makeup",
+        "cta_link": "shopify://collections/makeup",
+        "products_to_show": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 28
+      }
+    },
+    "trust_band": {
+      "type": "ks-trust-band",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 32
+      },
+      "blocks": {
+        "shipping": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "OK",
+            "text": "Worldwide shipping"
+          }
+        },
+        "authentic": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "OK",
+            "text": "Authentic Korean products"
+          }
+        },
+        "checkout": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "OK",
+            "text": "Secure checkout"
+          }
+        }
+      },
+      "block_order": [
+        "shipping",
+        "authentic",
+        "checkout"
+      ]
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "savings_tiers",
+    "new_arrivals",
+    "best_sellers",
+    "sunscreens",
+    "moisturisers",
+    "serums",
+    "makeup",
+    "trust_band"
   ]
 }

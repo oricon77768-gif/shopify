@@ -1,0 +1,168 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="ks-trust-band page-width section-{{ section.id }}-padding">
+    <ul class="ks-trust-band__list" role="list">
+      {%- for block in section.blocks -%}
+        <li class="ks-trust-band__item" {{ block.shopify_attributes }}>
+          {%- if block.settings.icon != blank -%}
+            <span class="ks-trust-band__icon" aria-hidden="true">{{ block.settings.icon | escape }}</span>
+          {%- endif -%}
+
+          {%- if block.settings.text != blank -%}
+            <span class="ks-trust-band__text">{{ block.settings.text | escape }}</span>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+
+{% stylesheet %}
+  .ks-trust-band__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .ks-trust-band__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    min-height: 4.8rem;
+    padding: 1rem 1.2rem;
+    border-top: 0.1rem solid rgba(var(--color-foreground), 0.12);
+    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.12);
+    text-align: center;
+  }
+
+  .ks-trust-band__icon {
+    font-size: 1.7rem;
+    line-height: 1;
+  }
+
+  .ks-trust-band__text {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: rgba(var(--color-foreground), 0.78);
+  }
+
+  @media screen and (min-width: 750px) {
+    .ks-trust-band__list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+    }
+
+    .ks-trust-band__item {
+      border-bottom: 0;
+    }
+
+    .ks-trust-band__item + .ks-trust-band__item {
+      border-left: 0.1rem solid rgba(var(--color-foreground), 0.12);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Trust band",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 28
+    }
+  ],
+  "blocks": [
+    {
+      "type": "trust_item",
+      "name": "Trust item",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "default": "OK",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Worldwide shipping",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust band",
+      "blocks": [
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "OK",
+            "text": "Worldwide shipping"
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "OK",
+            "text": "Authentic Korean products"
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "OK",
+            "text": "Secure checkout"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
