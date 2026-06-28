@@ -36,17 +36,17 @@
 
 {%- if show_section -%}
   <div class="color-{{ section.settings.color_scheme }} gradient">
-    <div class="ks-featured-collection-grid page-width section-{{ section.id }}-padding">
-      <div class="ks-featured-collection-grid__header">
+    <div class="lv-featured-collection-grid page-width section-{{ section.id }}-padding">
+      <div class="lv-featured-collection-grid__header">
         {%- if section.settings.heading != blank -%}
-          <h2 class="ks-featured-collection-grid__heading inline-richtext {{ section.settings.heading_size }}">
+          <h2 class="lv-featured-collection-grid__heading inline-richtext {{ section.settings.heading_size }}">
             {{ section.settings.heading }}
           </h2>
         {%- endif -%}
 
         {%- if section.settings.cta_label != blank -%}
           <a
-            class="ks-featured-collection-grid__cta link underlined-link"
+            class="lv-featured-collection-grid__cta link underlined-link"
             href="{% if section.settings.cta_link != blank %}{{ section.settings.cta_link }}{% else %}{{ selected_collection.url }}{% endif %}"
           >
             {{ section.settings.cta_label | escape }}
@@ -55,12 +55,12 @@
       </div>
 
       <ul
-        class="ks-featured-collection-grid__grid grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %}"
+        class="lv-featured-collection-grid__grid grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %}"
         role="list"
       >
         {%- assign skip_card_product_styles = false -%}
         {%- for product in selected_collection.products limit: products_to_show -%}
-          <li class="ks-featured-collection-grid__item grid__item">
+          <li class="lv-featured-collection-grid__item grid__item">
             {% render 'card-product',
               card_product: product,
               media_aspect_ratio: section.settings.image_ratio,
@@ -82,37 +82,37 @@
   </div>
 {%- elsif request.design_mode -%}
   <div class="color-{{ section.settings.color_scheme }} gradient">
-    <div class="ks-featured-collection-grid ks-featured-collection-grid--empty page-width section-{{ section.id }}-padding">
-      <div class="ks-featured-collection-grid__empty">
-        Choose a collection to show products here.
+    <div class="lv-featured-collection-grid lv-featured-collection-grid--empty page-width section-{{ section.id }}-padding">
+      <div class="lv-featured-collection-grid__empty">
+        Choose a booster box collection to show products here.
       </div>
     </div>
   </div>
 {%- endif -%}
 
 {% stylesheet %}
-  .ks-featured-collection-grid {
+  .lv-featured-collection-grid {
     display: grid;
     gap: 1.6rem;
   }
 
-  .ks-featured-collection-grid__header {
+  .lv-featured-collection-grid__header {
     display: flex;
     align-items: end;
     justify-content: space-between;
     gap: 1.2rem;
   }
 
-  .ks-featured-collection-grid__heading {
+  .lv-featured-collection-grid__heading {
     margin: 0;
   }
 
-  .ks-featured-collection-grid__cta {
+  .lv-featured-collection-grid__cta {
     flex: 0 0 auto;
     font-size: 1.3rem;
   }
 
-  .ks-featured-collection-grid__grid {
+  .lv-featured-collection-grid__grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.2rem 0.8rem;
@@ -121,12 +121,12 @@
     list-style: none;
   }
 
-  .ks-featured-collection-grid__item {
+  .lv-featured-collection-grid__item {
     width: 100%;
     max-width: none;
   }
 
-  .ks-featured-collection-grid__empty {
+  .lv-featured-collection-grid__empty {
     padding: 1.2rem;
     border: 0.1rem dashed rgba(var(--color-foreground), 0.22);
     color: rgba(var(--color-foreground), 0.65);
@@ -134,18 +134,18 @@
   }
 
   @media screen and (max-width: 749px) {
-    .ks-featured-collection-grid__header {
+    .lv-featured-collection-grid__header {
       align-items: start;
       flex-direction: column;
     }
   }
 
   @media screen and (min-width: 750px) {
-    .ks-featured-collection-grid {
+    .lv-featured-collection-grid {
       gap: 2rem;
     }
 
-    .ks-featured-collection-grid__grid {
+    .lv-featured-collection-grid__grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 1.6rem;
     }
@@ -154,7 +154,7 @@
 
 {% schema %}
 {
-  "name": "K-beauty collection grid",
+  "name": "Featured booster boxes",
   "tag": "section",
   "class": "section",
   "disabled_on": {
@@ -291,7 +291,7 @@
   ],
   "presets": [
     {
-      "name": "K-beauty collection grid"
+      "name": "Featured booster boxes"
     }
   ]
 }

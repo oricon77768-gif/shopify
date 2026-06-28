@@ -6,26 +6,26 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Stock up on Korean beauty and save more",
+            "heading": "Limited Vault",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Build your routine with skincare, sunscreen, makeup, and everyday K-beauty essentials.",
+            "text": "Sealed TCG booster boxes and display boxes, curated by game.",
             "text_style": "subtitle"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop K-beauty",
+            "button_label_1": "Shop booster boxes",
             "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_1": false,
+            "button_label_2": "Explore categories",
+            "button_link_2": "shopify://collections/all",
+            "button_style_secondary_2": true
           }
         }
       },
@@ -35,172 +35,108 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image_overlay_opacity": 20,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "middle-center",
         "show_text_box": false,
         "image_behavior": "none",
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
     },
-    "savings_tiers": {
-      "type": "ks-savings-tiers",
+    "category_gallery": {
+      "type": "lv-category-gallery",
       "settings": {
-        "heading": "Stock up and save more",
-        "subheading": "<p>Build a bigger Korean beauty basket and unlock savings according to your current store promotions.</p>",
+        "heading": "Shop by TCG",
+        "subheading": "<p>Start with Pokemon, Yu-Gi-Oh!, Magic, or One Piece, then move fast through sealed booster boxes.</p>",
         "heading_size": "h1",
         "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 24
+        "padding_top": 44,
+        "padding_bottom": 32
       },
       "blocks": {
-        "tier_1": {
-          "type": "tier",
+        "pokemon": {
+          "type": "category",
           "settings": {
-            "threshold": "$100+",
-            "label": "Start saving on beauty essentials"
+            "eyebrow": "Sealed boxes",
+            "title": "Pokemon",
+            "text": "Modern and collectible booster boxes.",
+            "cta_label": "Shop Pokemon",
+            "link": "shopify://collections/pokemon"
           }
         },
-        "tier_2": {
-          "type": "tier",
+        "yu_gi_oh": {
+          "type": "category",
           "settings": {
-            "threshold": "$250+",
-            "label": "Better value for stock-up orders"
+            "eyebrow": "Display boxes",
+            "title": "Yu-Gi-Oh!",
+            "text": "Classic and current sealed releases.",
+            "cta_label": "Shop Yu-Gi-Oh!",
+            "link": "shopify://collections/yu-gi-oh"
           }
         },
-        "tier_3": {
-          "type": "tier",
+        "magic": {
+          "type": "category",
           "settings": {
-            "threshold": "$500+",
-            "label": "Unlock higher campaign savings"
+            "eyebrow": "Booster boxes",
+            "title": "Magic",
+            "text": "Draft, set, collector, and play boxes.",
+            "cta_label": "Shop Magic",
+            "link": "shopify://collections/magic"
           }
         },
-        "tier_4": {
-          "type": "tier",
+        "one_piece": {
+          "type": "category",
           "settings": {
-            "threshold": "$1,000+",
-            "label": "Best tier for group and bulk baskets"
+            "eyebrow": "Sealed boxes",
+            "title": "One Piece",
+            "text": "Featured boxes from new and active sets.",
+            "cta_label": "Shop One Piece",
+            "link": "shopify://collections/one-piece"
           }
         }
       },
       "block_order": [
-        "tier_1",
-        "tier_2",
-        "tier_3",
-        "tier_4"
+        "pokemon",
+        "yu_gi_oh",
+        "magic",
+        "one_piece"
       ]
     },
-    "new_arrivals": {
-      "type": "ks-featured-collection-grid",
+    "featured_boxes": {
+      "type": "lv-featured-collection-grid",
+      "settings": {
+        "collection": "all",
+        "heading": "Featured booster boxes",
+        "heading_size": "h2",
+        "cta_label": "Shop all boxes",
+        "cta_link": "shopify://collections/all",
+        "products_to_show": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "standard",
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "limited_arrivals": {
+      "type": "lv-featured-collection-grid",
       "settings": {
         "collection": "new-arrivals",
-        "heading": "New Arrivals",
+        "heading": "New and limited arrivals",
         "heading_size": "h2",
-        "cta_label": "Shop new arrivals",
+        "cta_label": "View arrivals",
         "cta_link": "shopify://collections/new-arrivals",
         "products_to_show": 4,
         "image_ratio": "adapt",
         "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "color_scheme": "scheme-1",
-        "padding_top": 28,
-        "padding_bottom": 20
-      }
-    },
-    "best_sellers": {
-      "type": "ks-featured-collection-grid",
-      "settings": {
-        "collection": "best-sellers",
-        "heading": "Best Sellers",
-        "heading_size": "h2",
-        "cta_label": "Shop best sellers",
-        "cta_link": "shopify://collections/best-sellers",
-        "products_to_show": 4,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "color_scheme": "scheme-1",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "sunscreens": {
-      "type": "ks-featured-collection-grid",
-      "settings": {
-        "collection": "sunscreens",
-        "heading": "Sunscreens",
-        "heading_size": "h2",
-        "cta_label": "Shop sunscreens",
-        "cta_link": "shopify://collections/sunscreens",
-        "products_to_show": 4,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "color_scheme": "scheme-1",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "moisturisers": {
-      "type": "ks-featured-collection-grid",
-      "settings": {
-        "collection": "moisturisers",
-        "heading": "Moisturisers",
-        "heading_size": "h2",
-        "cta_label": "Shop moisturisers",
-        "cta_link": "shopify://collections/moisturisers",
-        "products_to_show": 4,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "color_scheme": "scheme-1",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "serums": {
-      "type": "ks-featured-collection-grid",
-      "settings": {
-        "collection": "serums",
-        "heading": "Serums",
-        "heading_size": "h2",
-        "cta_label": "Shop serums",
-        "cta_link": "shopify://collections/serums",
-        "products_to_show": 4,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "color_scheme": "scheme-1",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "makeup": {
-      "type": "ks-featured-collection-grid",
-      "settings": {
-        "collection": "makeup",
-        "heading": "Makeup",
-        "heading_size": "h2",
-        "cta_label": "Shop makeup",
-        "cta_link": "shopify://collections/makeup",
-        "products_to_show": 4,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
+        "show_vendor": true,
         "show_rating": false,
         "quick_add": "standard",
         "color_scheme": "scheme-1",
@@ -209,25 +145,25 @@
       }
     },
     "trust_band": {
-      "type": "ks-trust-band",
+      "type": "lv-trust-band",
       "settings": {
         "color_scheme": "scheme-1",
         "padding_top": 12,
         "padding_bottom": 32
       },
       "blocks": {
-        "shipping": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "OK",
-            "text": "Worldwide shipping"
-          }
-        },
         "authentic": {
           "type": "trust_item",
           "settings": {
             "icon": "OK",
-            "text": "Authentic Korean products"
+            "text": "Authentic sealed products"
+          }
+        },
+        "packing": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "OK",
+            "text": "Careful box packing"
           }
         },
         "checkout": {
@@ -239,21 +175,17 @@
         }
       },
       "block_order": [
-        "shipping",
         "authentic",
+        "packing",
         "checkout"
       ]
     }
   },
   "order": [
     "image_banner",
-    "savings_tiers",
-    "new_arrivals",
-    "best_sellers",
-    "sunscreens",
-    "moisturisers",
-    "serums",
-    "makeup",
+    "category_gallery",
+    "featured_boxes",
+    "limited_arrivals",
     "trust_band"
   ]
 }
