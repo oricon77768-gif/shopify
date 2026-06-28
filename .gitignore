@@ -1,1 +1,4 @@
 .codex-shopify/
+.venv-browser-use/
+.browser-use-home/
+.browser-use-config/
