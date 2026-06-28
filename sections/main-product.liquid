@@ -499,11 +499,6 @@
                     section_id: section.id,
                     show_pickup_availability: true
                   -%}
-                  {%- if section.settings.savings_reminder_text != blank -%}
-                    <p class="product__text caption-large rte">
-                      {{ section.settings.savings_reminder_text | escape }}
-                    </p>
-                  {%- endif -%}
                 {%- when 'rating' -%}
                   {%- if product.metafields.reviews.rating.value != blank -%}
                     <div class="rating-wrapper">
@@ -2295,12 +2290,6 @@
       "id": "enable_video_looping",
       "default": false,
       "label": "t:sections.main-product.settings.enable_video_looping.label"
-    },
-    {
-      "type": "text",
-      "id": "savings_reminder_text",
-      "label": "Savings reminder",
-      "default": "Stock up and unlock bigger savings at checkout."
     },
     {
       "type": "header",
