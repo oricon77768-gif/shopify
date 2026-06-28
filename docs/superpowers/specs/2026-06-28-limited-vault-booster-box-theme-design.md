@@ -4,7 +4,7 @@
 
 Build a Shopify theme direction for Limited Vault, a modern gallery-style storefront focused on sealed TCG booster boxes and display boxes.
 
-The storefront will replace the previous K-beauty merchandising direction. Implementation must remove K-beauty-specific homepage content, savings-tier messaging, beauty collection sections, and beauty trust copy before applying the Limited Vault concept.
+The storefront replaces the previous merchandising direction with a category-first sealed box shopping experience.
 
 ## Store Positioning
 
@@ -33,8 +33,6 @@ Use a modern gallery style:
 - Clear typography.
 - Compact product information.
 - Restrained accent colors that can work across multiple TCG brands.
-
-The design should avoid the old K-beauty tone, including skincare language, savings-tier promotion styling, beauty-category merchandising, and stock-up messaging.
 
 ## Recommended Approach
 
@@ -120,26 +118,9 @@ They should clearly show:
 - Shipping and authenticity reassurance.
 - Related products from the same category when available.
 
-Remove K-beauty stock-up savings reminders from product pages.
-
 ## Cart
 
-The cart should stay simple and conversion-focused.
-
-Remove previous savings-tier reminders from the cart. Replace them only if needed with sealed-product reassurance, such as secure checkout, careful packing, or shipping notes.
-
-## K-Beauty Cleanup Scope
-
-Before implementing Limited Vault, remove or replace the previous K-beauty work:
-
-- Remove K-beauty homepage copy from `templates/index.json`.
-- Remove references to skincare, sunscreen, makeup, Korean beauty, serums, and beauty essentials.
-- Remove or stop using `sections/ks-savings-tiers.liquid`.
-- Remove or replace `sections/ks-featured-collection-grid.liquid` if it remains beauty-specific.
-- Replace `sections/ks-trust-band.liquid` defaults if the section is reused.
-- Remove savings reminder settings and default text from product and cart sections if they are only supporting the old K-beauty theme.
-
-The old K-beauty design and implementation documents may remain as historical docs unless the user explicitly asks to delete them.
+The cart should stay simple and conversion-focused. It should keep checkout actions clear and can use sealed-product reassurance such as secure checkout, careful packing, or shipping notes.
 
 ## Data Assumptions
 
@@ -164,8 +145,9 @@ If a category collection is missing, the theme should still render editable text
 
 Implementation should be verified with:
 
-- Theme syntax validation for edited Liquid files.
-- Search for old K-beauty terms after cleanup.
+- Theme syntax validation for edited Liquid files when external validation is approved.
+- Local JSON syntax checks.
+- Local search for removed storefront direction terms after cleanup.
 - Desktop and mobile visual checks of homepage, collection page, product page, and cart.
 - Quick-add behavior from product grids.
 - Empty or missing collection fallback checks where practical.
@@ -178,3 +160,4 @@ Implementation should be verified with:
 - Grading, serial-number, or single-card marketplace features.
 - Custom backend logic.
 - Automatic price comparison or market data.
+
